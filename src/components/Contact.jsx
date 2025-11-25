@@ -1,6 +1,15 @@
+import { motion } from "framer-motion";
+
 export default function Contact() {
   return (
-    <section id="contact" className="my-16">
+    <motion.section
+      id="contact"
+      className="my-16"
+      initial={{ opacity: 0, y: 50 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.8 }}
+    >
       <h2 className="text-4xl font-bold mb-8 text-transparent bg-clip-text" style={{backgroundImage: "linear-gradient(90deg,#6366f1,#4f46e5)"}}>
         Contact
       </h2>
@@ -14,6 +23,6 @@ export default function Contact() {
         <a href="https://www.linkedin.com/in/yu-ju-chang-13812b1a6" target="_blank" className="contact-link">LinkedIn</a>
         <a href="https://github.com/changyuj" target="_blank" className="contact-link">GitHub</a>
       </div>
-    </section>
+    </motion.section>
   );
 }
