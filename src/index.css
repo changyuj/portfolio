@@ -5,43 +5,52 @@
 @tailwind components;
 @tailwind utilities;
 
-/* Custom global styles */
+/* Global body styling */
 body {
   @apply bg-gray-100 text-gray-800 font-sans antialiased;
 }
 
+/* Gradient headings for section titles */
 h1, h2, h3, h4, h5, h6 {
   @apply font-bold text-gray-900;
 }
 
+h2 {
+  @apply text-3xl mb-6 bg-clip-text text-transparent;
+  background-image: linear-gradient(90deg, #6366f1, #4f46e5);
+}
+
+/* Links styling */
 a {
   @apply text-indigo-600 hover:text-indigo-500 transition-colors duration-300;
 }
 
-section {
-  @apply my-12;
-}
-
-header {
-  @apply bg-white shadow-md py-4 mb-6;
-}
-
-footer {
-  @apply text-center py-6 text-gray-500 text-sm;
-}
-
-/* Optional: smooth scroll for anchor links */
+/* Smooth scrolling */
 html {
   scroll-behavior: smooth;
 }
 
-/* Card components for Projects */
+/* Header & Footer */
+header {
+  @apply bg-white shadow-md py-4 mb-6;
+}
+footer {
+  @apply text-center py-6 text-gray-500 text-sm;
+}
+
+/* About section */
+.about-text {
+  @apply leading-relaxed text-gray-700 text-lg;
+}
+
+/* Project card styling */
 .project-card {
-  @apply bg-white shadow-md rounded-lg p-6 transition-transform duration-200 hover:scale-105;
+  @apply bg-white shadow-md rounded-lg p-6 transition-transform duration-300 hover:scale-105 hover:shadow-xl;
 }
 
 .project-title {
-  @apply text-xl font-bold mb-2 text-indigo-600;
+  @apply text-xl font-bold mb-2 bg-clip-text text-transparent;
+  background-image: linear-gradient(90deg, #6366f1, #4f46e5);
 }
 
 .project-tech {
@@ -53,20 +62,15 @@ html {
 }
 
 .project-link {
-  @apply text-indigo-600 font-medium hover:underline;
+  @apply inline-block mt-2 px-4 py-2 bg-indigo-600 text-white rounded-md font-medium hover:bg-indigo-500 transition-colors duration-300;
 }
 
-/* About text styling */
-.about-text {
-  @apply leading-relaxed text-gray-700 text-lg;
-}
-
-/* Contact links styling */
+/* Contact section buttons/links */
 .contact-link {
-  @apply text-indigo-600 hover:text-indigo-500 underline;
+  @apply inline-block mt-2 px-5 py-3 bg-indigo-600 text-white rounded-lg font-semibold hover:bg-indigo-500 transition-all duration-300;
 }
 
-/* Optional: dark mode support */
+/* Dark mode support */
 @media (prefers-color-scheme: dark) {
   body {
     @apply bg-gray-900 text-gray-100;
