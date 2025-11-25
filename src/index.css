@@ -1,14 +1,80 @@
 /* src/index.css */
 
-/* Tailwind base (if using Tailwind) */
+/* Tailwind base imports */
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-/* Or add custom CSS */
+/* Custom global styles */
 body {
-  margin: 0;
-  font-family: system-ui, sans-serif;
-  background-color: #f3f4f6; /* gray-100 */
-  color: #1f2937; /* gray-800 */
+  @apply bg-gray-100 text-gray-800 font-sans antialiased;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  @apply font-bold text-gray-900;
+}
+
+a {
+  @apply text-indigo-600 hover:text-indigo-500 transition-colors duration-300;
+}
+
+section {
+  @apply my-12;
+}
+
+header {
+  @apply bg-white shadow-md py-4 mb-6;
+}
+
+footer {
+  @apply text-center py-6 text-gray-500 text-sm;
+}
+
+/* Optional: smooth scroll for anchor links */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Card components for Projects */
+.project-card {
+  @apply bg-white shadow-md rounded-lg p-6 transition-transform duration-200 hover:scale-105;
+}
+
+.project-title {
+  @apply text-xl font-bold mb-2 text-indigo-600;
+}
+
+.project-tech {
+  @apply text-sm text-gray-500 mb-2;
+}
+
+.project-desc {
+  @apply text-gray-700 mb-4;
+}
+
+.project-link {
+  @apply text-indigo-600 font-medium hover:underline;
+}
+
+/* About text styling */
+.about-text {
+  @apply leading-relaxed text-gray-700 text-lg;
+}
+
+/* Contact links styling */
+.contact-link {
+  @apply text-indigo-600 hover:text-indigo-500 underline;
+}
+
+/* Optional: dark mode support */
+@media (prefers-color-scheme: dark) {
+  body {
+    @apply bg-gray-900 text-gray-100;
+  }
+  header, footer, .project-card {
+    @apply bg-gray-800 shadow-lg;
+  }
+  a, .project-link, .contact-link {
+    @apply text-indigo-400;
+  }
 }
