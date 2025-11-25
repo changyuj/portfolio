@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Projects from "./components/Projects";
 import About from "./components/About";
 import Contact from "./components/Contact";
@@ -6,7 +5,7 @@ import Header from "./components/Header";
 
 export default function App() {
   return (
-    <div className="font-sans bg-gray-100 min-h-screen text-gray-800">
+    <div className="font-sans bg-gradient-to-b from-gray-100 via-gray-50 to-gray-100 min-h-screen text-gray-800">
       <Header />
       <main className="max-w-5xl mx-auto px-6">
         <About />
